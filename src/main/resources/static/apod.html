@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nasa's APOD</title>
+</head>
+<body>
+    <h1>APOD nasa</h1>
+    <img id="apodImage" src="" alt="APOD" width="500">
+    <script>
+        fetch('/apod/picture')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Response was not ok');
+                }
+                return response.json();
+            })
+            .then(apodData => {
+                const imageUrl = apodData.hdurl;
+                if (imageUrl) {
+                    document.getElementById('apodImage').src = imageUrl;
+                } else {
+                    throw new Error('Image not found in the API');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
