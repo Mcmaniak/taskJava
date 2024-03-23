@@ -41,7 +41,7 @@ Once the application is running, you can access it at http://localhost:8080.
 ### Run the Docker container:
 #### docker run -p 8080:8080 folklore-app
 Access the application in your web browser at http://localhost:8080.
-###
+##
 ### API Endpoints:
 #### GET /folklores: Retrieve all folklore entries.
 #### GET /folklores/{id}: Retrieve a specific folklore entry by ID.
