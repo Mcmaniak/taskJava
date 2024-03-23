@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folklore Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to the Folklore Application!</h1>
+<p>This application allows you to manage folklore data.</p>
+<h2>How to Use:</h2>
+<ol>
+    <li>To create a new folklore entry, send a POST request to <code>/folklores</code> with the following JSON payload:</li>
+    <pre>
+            {
+                "title": "Title of the folklore",
+                "originCountry": "Country of origin",
+                "description": "Description of the folklore",
+                "story": "The story of the folklore",
+                "characters": ["Character 1", "Character 2", ...]
+            }
+        </pre>
+    <li>To retrieve all folklore entries, send a GET request to <code>/folklores</code>.</li>
+    <li>To retrieve a specific folklore entry, send a GET request to <code>/folklores/{id}</code> where <code>{id}</code> is the ID of the folklore entry.</li>
+    <li>To update a folklore entry, send a PUT request to <code>/folklores/{id}</code> with the following JSON payload:</li>
+    <pre>
+            {
+                "title": "New title",
+                "originCountry": "New country",
+                "description": "New description",
+                "story": "New story",
+                "characters": ["New Character 1", "New Character 2", ...]
+            }
+        </pre>
+    <li>To delete a folklore entry, send a DELETE request to <code>/folklores/{id}</code> where <code>{id}</code> is the ID of the folklore entry.</li>
+</ol>
+</body>
+</html>
