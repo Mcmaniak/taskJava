@@ -17,7 +17,7 @@ public class FolkloreController {
 
     @GetMapping("/")
     public String getHomePage() {
-        return "index";
+        return "index.html";
     }
 
     @PostMapping

@@ -32,6 +32,16 @@ The Folklore Application is designed to handle various folklore entries, includi
 ### Access the Application:
 Once the application is running, you can access it at http://localhost:8080.
 
+## Docker
+#### Alternatively, you can run the application using Docker. Follow these steps:
+
+### Build the Docker image:
+
+#### docker build -t db -f src/Dockerfile .
+### Run the Docker container:
+#### docker run -p 8080:8080 folklore-app
+Access the application in your web browser at http://localhost:8080.
+
 ### API Endpoints:
 #### GET /folklores: Retrieve all folklore entries.
 #### GET /folklores/{id}: Retrieve a specific folklore entry by ID.
